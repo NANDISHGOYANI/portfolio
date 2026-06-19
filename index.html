@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cybersecurity Portfolio of Nandish Goyani (ZORO9!!). Ethical Hacker, Penetration Tester, and Red Team Operator. Custom interactive, Zoro-inspired premium portfolio.">
+    <meta name="keywords" content="Nandish Goyani, ZORO9!!, Cybersecurity, Portfolio, Ethical Hacker, Penetration Tester, Red Team, Surat, Gujarat, B.Sc IT">
+    <meta name="author" content="Nandish Goyani (ZORO9!!)">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ZORO9!! | Cybersecurity Portfolio">
+    <meta property="og:description" content="Professional portfolio of Nandish Goyani, future Ethical Hacker and Red Team Operator. Inspired by Roronoa Zoro.">
+    <meta property="og:image" content="https://zoro9.github.io/assets/preview.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="ZORO9!! | Cybersecurity Portfolio">
+    <meta property="twitter:description" content="Professional portfolio of Nandish Goyani, future Ethical Hacker and Red Team Operator. Inspired by Roronoa Zoro.">
+
+    <title>ZORO9!! | OffSec & Cybersecurity Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Terminal-like Custom Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="terminal-loader">
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">zoro9_bootloader.sh</span>
+            </div>
+            <div class="terminal-content" id="preloader-text">
+                <!-- Lines will be appended here by JS -->
+            </div>
+            <div class="loader-progress-bar">
+                <div class="progress-fill" id="loader-progress"></div>
+            </div>
+        </div>
+        <div class="slash-overlay left"></div>
+        <div class="slash-overlay right"></div>
+        <div class="slash-line line-1"></div>
+        <div class="slash-line line-2"></div>
+        <div class="slash-line line-3"></div>
+    </div>
+
+    <!-- Haki Particle Canvas -->
+    <canvas id="haki-canvas"></canvas>
+
+    <!-- Cyber Scanline Overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Header Navigation -->
+    <header class="header navbar-glass">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="glow-text">ZORO<span class="accent-glow">9!!</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#timeline" class="nav-link">Journey</a></li>
+                    <li><a href="#certs" class="nav-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-controls">
+                <button class="resume-quick-btn" onclick="window.open('assets/resume.pdf', '_blank')">
+                    <i data-lucide="download"></i>
+                    <span>Resume</span>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-content">
+        
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-slashes">
+                <div class="hero-slash s-1"></div>
+                <div class="hero-slash s-2"></div>
+                <div class="hero-slash s-3"></div>
+            </div>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span class="badge-text font-code">STATUS: ACTIVE // PENETRATION_MODE</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="title-sub font-code">NANDISH RAMESHBHAI GOYANI</span>
+                        <span class="title-main glitch-text" data-text="ZORO9!!">ZORO9!!</span>
+                    </h1>
+                    
+                    <h2 class="hero-subtitle font-code">
+                        <span class="text-prefix">&gt;</span> <span class="typing-text"></span><span class="cursor">|</span>
+                    </h2>
+                    
+                    <p class="hero-desc">
+                        Specializing in offensive security, vulnerability assessment, and advanced penetration testing. Bridging the discipline of a warrior with cutting-edge cybersecurity methodology to safeguard digital assets.
+                    </p>
+                    
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn btn-primary">
+                            <i data-lucide="terminal"></i>
+                            <span>Scan Projects</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i data-lucide="shield-alert"></i>
+                            <span>Contact Operator</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats font-code">
+                        <div class="stat-item">
+                            <span class="stat-val text-glow">20</span>
+                            <span class="stat-lbl">Age</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-val text-glow">Surat, IN</span>
+                            <span class="stat-lbl">Location</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-val text-glow">B.Sc IT</span>
+                            <span class="stat-lbl">Education</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-graphic">
+                    <div class="cinematic-frame glass-card">
+                        <div class="cinematic-bg"></div>
+                        <div class="portrait-float-wrapper">
+                            <img src="assets/profile.jpg" alt="Nandish Goyani (ZORO9!!)" class="cinematic-portrait">
+                        </div>
+                        <div class="light-overlay cyan-overlay"></div>
+                        <div class="light-overlay orange-overlay"></div>
+                        <div class="volumetric-rays"></div>
+                        <div class="holographic-scanlines"></div>
+                        <div class="fog-overlay"></div>
+                        <canvas id="dust-canvas"></canvas>
+                        <div class="vignette-overlay"></div>
+                        <div class="ascii-status font-code">
+                            <span class="pulse-dot active"></span>
+                            <span>SYS_FEED: OPERATOR_VISUAL // CAM_01</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span class="font-code text-muted">SCROLL_DOWN</span>
+            </div>
+        </section>
+
+        <!-- 2. About Me Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <div class="title-decor">
+                            <!-- Blade Runner Origami Unicorn SVG Motif -->
+                            <svg class="origami-unicorn-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="50,15 53,28 47,28" stroke-linejoin="round"/>
+                                <polygon points="47,28 65,37 52,43" stroke-linejoin="round"/>
+                                <polygon points="52,43 65,37 68,52" stroke-linejoin="round"/>
+                                <polygon points="52,43 68,52 55,57 42,52" stroke-linejoin="round"/>
+                                <polygon points="55,57 73,62 78,72 55,72" stroke-linejoin="round"/>
+                                <polygon points="42,52 55,57 55,72 37,67" stroke-linejoin="round"/>
+                                <polyline points="37,67 28,82 23,82" stroke-linejoin="round"/>
+                                <polyline points="55,72 50,82 45,82" stroke-linejoin="round"/>
+                                <polyline points="63,72 66,82 71,82" stroke-linejoin="round"/>
+                                <polyline points="78,72 83,82 88,82" stroke-linejoin="round"/>
+                                <polyline points="78,65 87,67 83,72" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h2 class="section-title">Identity & Objective</h2>
+                    </div>
+                    <p class="section-subtitle font-code">SYS_INFO // THE_CODE_OF_THE_WARRIOR</p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Left: Interactive Terminal Card -->
+                    <div class="terminal-card glass-card">
+                        <div class="terminal-card-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-tab font-code">nandish@zoro9:~$ cat identity.json</span>
+                        </div>
+                        <div class="terminal-card-body font-code">
+                            <p><span class="term-prompt">nandish@zoro9:~$</span> cat identity.json</p>
+                            <pre class="json-content">
+{
+  <span class="json-key">"name"</span>: <span class="json-val">"Nandish Goyani"</span>,
+  <span class="json-key">"alias"</span>: <span class="json-val">"ZORO9!!"</span>,
+  <span class="json-key">"specialization"</span>: [
+    <span class="json-val">"Offensive Security"</span>,
+    <span class="json-val">"Penetration Testing"</span>,
+    <span class="json-val">"Red Teaming"</span>
+  ],
+  <span class="json-key">"education"</span>: <span class="json-val">"B.Sc Information Technology"</span>,
+  <span class="json-key">"philosophy"</span>: <span class="json-val">"Discipline, Mastery, Constant Evasion"</span>,
+  <span class="json-key">"status"</span>: <span class="json-val">"Scanning for vulnerabilities..."</span>
+}</pre>
+                            <p><span class="term-prompt">nandish@zoro9:~$</span> <span class="blink-cursor">_</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Right: About Description & Warrior Card -->
+                    <div class="about-content">
+                        <div class="operator-profile-card glass-card">
+                            <div class="profile-photo-wrapper">
+                                <img src="assets/profile.jpg" alt="Nandish Goyani (ZORO9!!)" class="profile-photo">
+                                <div class="scanner-line"></div>
+                                <div class="profile-corners">
+                                    <div class="corner top-left"></div>
+                                    <div class="corner top-right"></div>
+                                    <div class="corner bottom-left"></div>
+                                    <div class="corner bottom-right"></div>
+                                </div>
+                            </div>
+                            <div class="profile-meta font-code">
+                                <div class="meta-row">
+                                    <span class="meta-label">SYS_ID:</span>
+                                    <span class="meta-val text-glow">NANDISH_R_GOYANI</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span class="meta-label">CODE_NAME:</span>
+                                    <span class="meta-val text-glow">ZORO9!!</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span class="meta-label">CLEARANCE:</span>
+                                    <span class="meta-val text-glow">LEVEL_03 [ETHICAL_HACKER]</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span class="meta-label">SYS_STATUS:</span>
+                                    <span class="meta-val text-glow pulse-dot active"></span> <span class="meta-val text-glow text-active">ONLINE</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile-summary">
+                            <h3>Cybersecurity Enthusiast & Ethical Hacker</h3>
+                            <p>
+                                I am an aspiring offensive security professional currently completing my B.Sc in Information Technology in Surat, Gujarat. I look at networks and web infrastructures through the lens of an adversary to identify vulnerabilities and fortify defenses.
+                            </p>
+                            <p>
+                                Just as Roronoa Zoro refines his three-sword style to cut through any obstacle, I dedicate my days to refining my hacking skills, studying network exploits, and automating penetration tools. I believe cybersecurity is not just a career, but a path of continuous technical discipline and mental edge.
+                            </p>
+                        </div>
+
+                        <div class="warrior-card glass-card">
+                            <div class="warrior-header">
+                                <i data-lucide="binary" class="accent-glow-text"></i>
+                                <h4 class="font-code">THE BASELINE INTEGRITY CHECK</h4>
+                            </div>
+                            <blockquote class="warrior-quote">
+                                "A system of cells interlinked within cells interlinked. Against the dark, a tall white fountain played."
+                                <cite class="font-code">— Officer K's Baseline Protocol applied to Infrastructure Hardening</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <div class="title-decor">
+                            <i data-lucide="cpu" class="accent-glow-text"></i>
+                        </div>
+                        <h2 class="section-title">Arsenal & Skillsets</h2>
+                    </div>
+                    <p class="section-subtitle font-code">WEAPON_CALIBRATION_MATRIX</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Linux & OS Skill Card -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-wrap">
+                            <i data-lucide="terminal"></i>
+                        </div>
+                        <h3 class="skill-name">Linux & Administration</h3>
+                        <p class="skill-desc">Expert navigation in command-line environments, shell scripting (Bash), privilege escalation methodology, and system hardening.</p>
+                        <div class="progress-container font-code">
+                            <div class="progress-labels">
+                                <span>Mastery</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar-fill" data-progress="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Networking Skill Card -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-wrap">
+                            <i data-lucide="network"></i>
+                        </div>
+                        <h3 class="skill-name">Networking Fundamentals</h3>
+                        <p class="skill-desc">Deep understanding of TCP/IP, OSI layers, routing protocols, firewalls, and analysis of packet captures for threat assessment.</p>
+                        <div class="progress-container font-code">
+                            <div class="progress-labels">
+                                <span>Mastery</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar-fill" data-progress="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Python Scripting Card -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-wrap">
+                            <i data-lucide="code-2"></i>
+                        </div>
+                        <h3 class="skill-name">Python Automation</h3>
+                        <p class="skill-desc">Writing custom scripts for vulnerability scanning, port scanners, custom exploits, automating parsing pipelines, and cryptography.</p>
+                        <div class="progress-container font-code">
+                            <div class="progress-labels">
+                                <span>Mastery</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar-fill" data-progress="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Git & GitHub Skill Card -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-wrap">
+                            <i data-lucide="git-branch"></i>
+                        </div>
+                        <h3 class="skill-name">Git & Code Repositories</h3>
+                        <p class="skill-desc">Version control management, working with open-source offensive security tools, building and sharing custom security script libraries.</p>
+                        <div class="progress-container font-code">
+                            <div class="progress-labels">
+                                <span>Mastery</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar-fill" data-progress="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cybersecurity General Card -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-wrap">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3 class="skill-name">Cybersecurity Foundations</h3>
+                        <p class="skill-desc">Vulnerability assessment, common attack vectors, security policy analysis, risk assessments, and cyber threat intelligence.</p>
+                        <div class="progress-container font-code">
+                            <div class="progress-labels">
+                                <span>Mastery</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar-fill" data-progress="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Application Security Card -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-wrap">
+                            <i data-lucide="globe"></i>
+                        </div>
+                        <h3 class="skill-name">Web Application Security</h3>
+                        <p class="skill-desc">Identifying OWASP Top 10 vulnerabilities (SQLi, XSS, CSRF, IDOR, SSRF), and advising on mitigation and secure coding practices.</p>
+                        <div class="progress-container font-code">
+                            <div class="progress-labels">
+                                <span>Mastery</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar-fill" data-progress="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool: Burp Suite Card -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-wrap">
+                            <i data-lucide="fingerprint"></i>
+                        </div>
+                        <h3 class="skill-name">Burp Suite Professional</h3>
+                        <p class="skill-desc">HTTP intercept, request manipulation, active/passive vulnerability scanning, intruder attacks, and decoding complex session data.</p>
+                        <div class="progress-container font-code">
+                            <div class="progress-labels">
+                                <span>Mastery</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar-fill" data-progress="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool: Nmap Card -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-wrap">
+                            <i data-lucide="radar"></i>
+                        </div>
+                        <h3 class="skill-name">Nmap Advanced Scan</h3>
+                        <p class="skill-desc">Port mapping, firewall/IDS evasion, OS detection, service versioning, and using the Nmap Scripting Engine (NSE) for quick audits.</p>
+                        <div class="progress-container font-code">
+                            <div class="progress-labels">
+                                <span>Mastery</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar-fill" data-progress="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool: Wireshark Card -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-wrap">
+                            <i data-lucide="eye"></i>
+                        </div>
+                        <h3 class="skill-name">Wireshark Traffic Audit</h3>
+                        <p class="skill-desc">Deep packet analysis, diagnosing TCP handshakes, extracting cleartext credentials, filter design, and malicious payload discovery.</p>
+                        <div class="progress-container font-code">
+                            <div class="progress-labels">
+                                <span>Mastery</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar-fill" data-progress="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <div class="title-decor">
+                            <i data-lucide="folder-git-2" class="accent-glow-text"></i>
+                        </div>
+                        <h2 class="section-title">Offensive Projects</h2>
+                    </div>
+                    <p class="section-subtitle font-code">DEPLOYED_OPERATIONS // SECURE_BUILDS</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Secure Store -->
+                    <div class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-matrix-overlay"></div>
+                            <div class="project-tags font-code">
+                                <span class="tag threat-high">THREAT: CRITICAL</span>
+                                <span class="tag tech">NextJS</span>
+                                <span class="tag tech">Prisma</span>
+                            </div>
+                            <div class="project-icon-placeholder">
+                                <i data-lucide="shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-name">Secure Store</h3>
+                            <p class="project-desc">
+                                A fully secure, production-grade e-commerce application built to demonstrate mitigation of OWASP Top 10 web vulnerabilities. Features end-to-end encryption, input sanitization, rate limiting, and security header integration.
+                            </p>
+                            <ul class="project-highlights font-code">
+                                <li><span>[+]</span> Mitigated SQL injection via parameterized queries</li>
+                                <li><span>[+]</span> Integrated robust JWT auth with refresh tokens</li>
+                                <li><span>[+]</span> Fully hardened headers (CSP, HSTS, X-Frame)</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/NANDISHGOYANI" target="_blank" class="btn btn-icon" aria-label="View Code on GitHub">
+                                    <i data-lucide="github"></i>
+                                    <span>Code Base</span>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-demo disabled" aria-label="Live Demo Unavailable">
+                                    <i data-lucide="external-link"></i>
+                                    <span>Live Static</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Caesar Cipher Tool -->
+                    <div class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-matrix-overlay"></div>
+                            <div class="project-tags font-code">
+                                <span class="tag threat-medium">THREAT: MINOR</span>
+                                <span class="tag tech">Python</span>
+                                <span class="tag tech">Tkinter</span>
+                            </div>
+                            <div class="project-icon-placeholder">
+                                <i data-lucide="key-round"></i>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-name">Caesar Cipher Tool</h3>
+                            <p class="project-desc">
+                                A lightweight cryptographic tool providing visualization and execution of Caesar shift encryption, decryption, and frequency-based brute-force attack testing.
+                            </p>
+                            <ul class="project-highlights font-code">
+                                <li><span>[+]</span> Visual interface built using Python UI packages</li>
+                                <li><span>[+]</span> Includes built-in letter frequency analysis</li>
+                                <li><span>[+]</span> Decrypts ciphertext without shift key via brute-force</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/NANDISHGOYANI" target="_blank" class="btn btn-icon" aria-label="View Code on GitHub">
+                                    <i data-lucide="github"></i>
+                                    <span>Code Base</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Playfair Cipher Tool -->
+                    <div class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-matrix-overlay"></div>
+                            <div class="project-tags font-code">
+                                <span class="tag threat-medium">THREAT: MODERATE</span>
+                                <span class="tag tech">JavaScript</span>
+                                <span class="tag tech">HTML5</span>
+                            </div>
+                            <div class="project-icon-placeholder">
+                                <i data-lucide="binary"></i>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-name">Playfair Cipher Tool</h3>
+                            <p class="project-desc">
+                                Interactive web utility displaying Playfair matrix ciphering. Explains diagraph analysis, key matrix operations, and cipher processes dynamically.
+                            </p>
+                            <ul class="project-highlights font-code">
+                                <li><span>[+]</span> Interactive 5x5 grid generation and swapping animation</li>
+                                <li><span>[+]</span> Visual representation of diagraph intersections</li>
+                                <li><span>[+]</span> Lightweight, high-performance client-side JS</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/NANDISHGOYANI" target="_blank" class="btn btn-icon" aria-label="View Code on GitHub">
+                                    <i data-lucide="github"></i>
+                                    <span>Code Base</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Android Security Projects -->
+                    <div class="project-card glass-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-matrix-overlay"></div>
+                            <div class="project-tags font-code">
+                                <span class="tag threat-high">THREAT: ELEVATED</span>
+                                <span class="tag tech">Kotlin</span>
+                                <span class="tag tech">Frida</span>
+                            </div>
+                            <div class="project-icon-placeholder">
+                                <i data-lucide="smartphone"></i>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-name">Android Hacking Suite</h3>
+                            <p class="project-desc">
+                                Collection of tools built to demonstrate Android application reverse engineering, including certificate pinning bypass scripts, root detection overrides, and basic malicious payload containers.
+                            </p>
+                            <ul class="project-highlights font-code">
+                                <li><span>[+]</span> Root detection bypass via Frida hooking script</li>
+                                <li><span>[+]</span> Extracted stored data via SQLite database decryption</li>
+                                <li><span>[+]</span> Analysis of Android reverse engineering frameworks</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/NANDISHGOYANI" target="_blank" class="btn btn-icon" aria-label="View Code on GitHub">
+                                    <i data-lucide="github"></i>
+                                    <span>Code Base</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Cybersecurity Journey Timeline -->
+        <section id="timeline" class="timeline-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <div class="title-decor">
+                            <i data-lucide="trending-up" class="accent-glow-text"></i>
+                        </div>
+                        <h2 class="section-title">Cybersecurity Journey</h2>
+                    </div>
+                    <p class="section-subtitle font-code">CLEARANCE_LEVELS // UNLOCKING_CAPABILITIES</p>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <!-- Line down the middle -->
+                    <div class="timeline-line"></div>
+
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item" data-level="1">
+                        <div class="timeline-dot font-code">L1</div>
+                        <div class="timeline-content-wrapper">
+                            <div class="timeline-card glass-card">
+                                <span class="timeline-badge font-code">LEVEL_01 // ACTIVE</span>
+                                <h3 class="timeline-title">B.Sc IT Student</h3>
+                                <p class="timeline-date font-code">2023 - Present // Surat, Gujarat</p>
+                                <p class="timeline-text">
+                                    Began academic foundation in Information Technology. Mastering operating systems, data structures, and database engines. Built core interest in low-level system commands and packet movements.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item" data-level="2">
+                        <div class="timeline-dot font-code">L2</div>
+                        <div class="timeline-content-wrapper">
+                            <div class="timeline-card glass-card">
+                                <span class="timeline-badge font-code">LEVEL_02 // COMPLETED</span>
+                                <h3 class="timeline-title">Active Security Learner</h3>
+                                <p class="timeline-date font-code">2024 // OffSec Labs</p>
+                                <p class="timeline-text">
+                                    Dived into TryHackMe and HackTheBox. Solved CTFs, learned network security basics, active reconnaissance, scanning strategies, and script development in Python. Unlocked foundational security concepts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item" data-level="3">
+                        <div class="timeline-dot font-code">L3</div>
+                        <div class="timeline-content-wrapper">
+                            <div class="timeline-card glass-card">
+                                <span class="timeline-badge font-code">LEVEL_03 // ACTIVE</span>
+                                <h3 class="timeline-title">Ethical Hacker</h3>
+                                <p class="timeline-date font-code">2025 // Vulnerability Research</p>
+                                <p class="timeline-text">
+                                    Acquiring hands-on vulnerability analysis experience. Exploiting and mapping outdated services, examining source code flaws, working extensively with web interception tools like Burp Suite and shell scripting.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item" data-level="4">
+                        <div class="timeline-dot font-code">L4</div>
+                        <div class="timeline-content-wrapper">
+                            <div class="timeline-card glass-card">
+                                <span class="timeline-badge font-code">LEVEL_04 // PREPARATION</span>
+                                <h3 class="timeline-title">Penetration Tester</h3>
+                                <p class="timeline-date font-code">2026 // OffSec & Web Sec</p>
+                                <p class="timeline-text">
+                                    Studying professional threat reporting, automated payload execution, exploit compilation, API threat modeling, and testing complex networks against intrusion vectors. Prepare for professional certs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 5 -->
+                    <div class="timeline-item" data-level="5">
+                        <div class="timeline-dot font-code">L5</div>
+                        <div class="timeline-content-wrapper">
+                            <div class="timeline-card glass-card">
+                                <span class="timeline-badge font-code">LEVEL_05 // DESTINATION</span>
+                                <h3 class="timeline-title">Red Team Operator</h3>
+                                <p class="timeline-date font-code">Future Goal // Corporate OffSec</p>
+                                <p class="timeline-text">
+                                    Ultimate career destination: Simulating advanced adversaries, evasion of modern endpoint protections (EDR), compromising Active Directory architectures, and conducting covert red team simulations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Certifications Section -->
+        <section id="certs" class="certs-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <div class="title-decor">
+                            <i data-lucide="award" class="accent-glow-text"></i>
+                        </div>
+                        <h2 class="section-title">Certifications Matrix</h2>
+                    </div>
+                    <p class="section-subtitle font-code">VERIFIED_CREDENTIALS // PROVING_CAPABILITY</p>
+                </div>
+
+                <div class="certs-grid">
+                    <!-- Cert 1: OSCP -->
+                    <div class="cert-card glass-card progress-border">
+                        <div class="cert-badge-icon">
+                            <i data-lucide="shield-check" class="oscp-glow"></i>
+                        </div>
+                        <div class="cert-info">
+                            <div class="cert-status font-code prep-status">IN_PREPARATION</div>
+                            <h3 class="cert-title">OffSec Certified Professional (OSCP)</h3>
+                            <p class="cert-org font-code">OffSec</p>
+                            <p class="cert-desc">Targeting OSCP to demonstrate hands-on 24-hour penetration testing skills, active directory exploitation, and security report generation.</p>
+                        </div>
+                        <div class="cert-progress-line prep-fill"></div>
+                    </div>
+
+                    <!-- Cert 2: eJPT -->
+                    <div class="cert-card glass-card active-border">
+                        <div class="cert-badge-icon">
+                            <i data-lucide="shield" class="ejpt-glow"></i>
+                        </div>
+                        <div class="cert-info">
+                            <div class="cert-status font-code active-status">READY_TO_TEST</div>
+                            <h3 class="cert-title">eLearnSecurity Junior Penetration Tester</h3>
+                            <p class="cert-org font-code">INE Security</p>
+                            <p class="cert-desc">Focusing on network scanning, fundamental routing assessments, web application hacking, and simple vulnerability identification.</p>
+                        </div>
+                        <div class="cert-progress-line active-fill"></div>
+                    </div>
+
+                    <!-- Cert 3: CEH -->
+                    <div class="cert-card glass-card progress-border">
+                        <div class="cert-badge-icon">
+                            <i data-lucide="key" class="ceh-glow"></i>
+                        </div>
+                        <div class="cert-info">
+                            <div class="cert-status font-code prep-status">PLANNED</div>
+                            <h3 class="cert-title">Certified Ethical Hacker (CEH)</h3>
+                            <p class="cert-org font-code">EC-Council</p>
+                            <p class="cert-desc">Gaining general awareness of common commercial and open source scanning suites, trojan creation techniques, and risk ratings.</p>
+                        </div>
+                        <div class="cert-progress-line prep-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="contact-container">
+                <div class="comms-header-cinematic">
+                    <h2 class="comms-title-large">LET'S BUILD SOMETHING SECURE</h2>
+                    <p class="comms-subtitle-cinematic">Cybersecurity • Offensive Security • Ethical Hacking</p>
+                </div>
+
+                <div class="cinematic-comms-container">
+                    <!-- Left Wing: Email & GitHub -->
+                    <div class="comms-wing left-wing">
+                        <!-- Card 1: Email -->
+                        <a href="mailto:nandishgoyani999@gmail.com" class="luxury-card glass-card card-email">
+                            <div class="luxury-card-glow"></div>
+                            <div class="luxury-card-border"></div>
+                            <div class="luxury-card-content">
+                                <div class="luxury-icon-wrapper">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <span class="luxury-label font-code">SECURE_COMM_ADDRESS</span>
+                                <h3 class="luxury-title">Email</h3>
+                                <p class="luxury-value">nandishgoyani999@gmail.com</p>
+                            </div>
+                            <div class="luxury-card-shimmer"></div>
+                        </a>
+
+                        <!-- Card 2: GitHub -->
+                        <a href="https://github.com/NANDISHGOYANI" target="_blank" class="luxury-card glass-card card-github">
+                            <div class="luxury-card-glow"></div>
+                            <div class="luxury-card-border"></div>
+                            <div class="luxury-card-content">
+                                <div class="luxury-icon-wrapper">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="brand-logo-svg">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.234c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.22.694.825.576C20.565 21.795 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+                                    </svg>
+                                </div>
+                                <span class="luxury-label font-code">SOURCE_REPOSITORY</span>
+                                <h3 class="luxury-title">GitHub</h3>
+                                <p class="luxury-value">github.com/NANDISHGOYANI</p>
+                            </div>
+                            <div class="luxury-card-shimmer"></div>
+                        </a>
+                    </div>
+
+                    <!-- Centerpiece: Floating Holographic Nexus Core -->
+                    <div class="holographic-nexus-wrapper">
+                        <!-- Ambient Blurred Radial Glow behind the hologram (Cyan, Purple, Orange) -->
+                        <div class="nexus-ambient-bg-glow"></div>
+
+                        <!-- Atmospheric Fog Mesh -->
+                        <div class="nexus-fog-mesh"></div>
+                        
+                        <!-- Core Container with Slow Floating Motion & Mouse Parallax -->
+                        <div class="holographic-core-float">
+                            <!-- Canvas Particle System -->
+                            <canvas id="holo-particle-canvas"></canvas>
+                            
+                            <!-- Energy Pulse Waves -->
+                            <div class="holo-pulse-wave wave-1"></div>
+                            <div class="holo-pulse-wave wave-2"></div>
+                            <div class="holo-pulse-wave wave-3"></div>
+
+                            <!-- Glowing central sphere (Light Bloom) -->
+                            <div class="hologram-core-sphere">
+                                <div class="core-sphere-inner"></div>
+                            </div>
+                            
+                            <!-- CSS 3D Rotating Rings (More rings added!) -->
+                            <div class="hologram-rings">
+                                <div class="holo-ring ring-outer-extra"></div>
+                                <div class="holo-ring ring-outer"></div>
+                                <div class="holo-ring ring-middle-extra"></div>
+                                <div class="holo-ring ring-middle"></div>
+                                <div class="holo-ring ring-inner"></div>
+                                <div class="holo-ring ring-inner-extra"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Hologram Pedestal / Projector -->
+                        <div class="hologram-pedestal">
+                            <div class="pedestal-glow"></div>
+                            <div class="pedestal-line"></div>
+                        </div>
+
+                        <!-- Cinematic Quote under the hologram -->
+                        <div class="hologram-quote font-code">
+                            <span class="quote-decor-brackets">[</span>
+                            <div class="quote-text-container">
+                                <p class="quote-line-1">Every system can be understood.</p>
+                                <p class="quote-line-2">Every weakness can be found.</p>
+                            </div>
+                            <span class="quote-decor-brackets">]</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Wing: LinkedIn & Resume -->
+                    <div class="comms-wing right-wing">
+                        <!-- Card 3: LinkedIn -->
+                        <a href="https://www.linkedin.com/in/nandish-goyani-1888092b5/" target="_blank" class="luxury-card glass-card card-linkedin">
+                            <div class="luxury-card-glow"></div>
+                            <div class="luxury-card-border"></div>
+                            <div class="luxury-card-content">
+                                <div class="luxury-icon-wrapper">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="brand-logo-svg">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </div>
+                                <span class="luxury-label font-code">PROFESSIONAL_NETWORK</span>
+                                <h3 class="luxury-title">LinkedIn</h3>
+                                <p class="luxury-value">linkedin.com/in/nandish-goyani</p>
+                            </div>
+                            <div class="luxury-card-shimmer"></div>
+                        </a>
+
+                        <!-- Card 4: Resume -->
+                        <a href="assets/resume.pdf" download="Nandish_Goyani_Resume.pdf" class="luxury-card glass-card card-resume">
+                            <div class="luxury-card-glow"></div>
+                            <div class="luxury-card-border"></div>
+                            <div class="luxury-card-content">
+                                <div class="luxury-icon-wrapper">
+                                    <i data-lucide="file-text"></i>
+                                </div>
+                                <span class="luxury-label font-code">CLEARANCE_DATASET</span>
+                                <h3 class="luxury-title">Resume</h3>
+                                <p class="luxury-value">Download dataset.pdf</p>
+                            </div>
+                            <div class="luxury-card-shimmer"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <p class="font-code text-glow">ZORO9!! // NANDISH GOYANI</p>
+                <p class="copyright">&copy; 2026. All those moments will be lost in time, like tears in rain.</p>
+            </div>
+            
+            <div class="footer-center">
+                <!-- Blade Runner Origami Unicorn SVG Motif -->
+                <svg class="origami-unicorn-icon footer-swords-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <polygon points="50,15 53,28 47,28" stroke-linejoin="round"/>
+                    <polygon points="47,28 65,37 52,43" stroke-linejoin="round"/>
+                    <polygon points="52,43 65,37 68,52" stroke-linejoin="round"/>
+                    <polygon points="52,43 68,52 55,57 42,52" stroke-linejoin="round"/>
+                    <polygon points="55,57 73,62 78,72 55,72" stroke-linejoin="round"/>
+                    <polygon points="42,52 55,57 55,72 37,67" stroke-linejoin="round"/>
+                    <polyline points="37,67 28,82 23,82" stroke-linejoin="round"/>
+                    <polyline points="55,72 50,82 45,82" stroke-linejoin="round"/>
+                    <polyline points="63,72 66,82 71,82" stroke-linejoin="round"/>
+                    <polyline points="78,72 83,82 88,82" stroke-linejoin="round"/>
+                    <polyline points="78,65 87,67 83,72" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <div class="footer-right font-code text-muted">
+                <span class="pulse-dot active"></span>
+                <span>SECURE_LINK: ESTABLISHED</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP for scroll-triggered premium animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Local logic script -->
+    <script src="script.js"></script>
+</body>
+</html>
+
